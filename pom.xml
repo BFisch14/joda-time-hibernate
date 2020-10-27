@@ -87,12 +87,14 @@
         <version>1.4</version>
         <executions>
           <execution>
+          <id>metadata</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>create-metadata</goal>
             </goals>
           </execution>
           <execution>
+          <id>Validate</id>
             <phase>validate</phase>
             <goals>
               <goal>create</goal>
