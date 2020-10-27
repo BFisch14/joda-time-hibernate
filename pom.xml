@@ -108,6 +108,7 @@
           <items>
             <item>timestamp</item>
           </items>
+          <shortRevisionLength>5</shortRevisionLength>
         </configuration>
         
       </plugin>
