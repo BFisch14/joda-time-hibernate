@@ -91,6 +91,8 @@
             <goals>
               <goal>create-metadata</goal>
             </goals>
+          </execution>
+          <execution>
             <phase>validate</phase>
             <goals>
               <goal>create</goal>
