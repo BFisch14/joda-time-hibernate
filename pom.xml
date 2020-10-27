@@ -81,10 +81,36 @@
     </resources>
     <!-- define build -->
     <plugins>
-
-
-
-
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>generate-ressources</phase>
+            <goals>
+              <goal>create-metadata</goal>
+            </goals>
+          </execution>
+        </executions>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <doCheck>true</doCheck>
+          <doUpdate>true</doUpdate>
+        </configuration>
+        <format>{0,date,yyyy-MM-dd HH:mm:ss}</format>
+      <items>
+        <item>timestamp</item>
+        <item>Buil
+      </items>
+      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -422,15 +448,15 @@
 
   <distributionManagement>
     <snapshotRepository>
-            <id>snapshots</id>
-            <name>c2f997758476-snapshots</name>
-            <url>http://artifactory:8081/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-        <repository>
-            <id>central</id>
-            <name>c2f997758476-releases</name>
-            <url>http://artifactory:8081/artifactory/libs-release-local</url>
-        </repository>
+      <id>snapshots</id>
+      <name>c2f997758476-snapshots</name>
+      <url>http://artifactory:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+    <repository>
+      <id>central</id>
+      <name>c2f997758476-releases</name>
+      <url>http://artifactory:8081/artifactory/libs-release-local</url>
+    </repository>
   </distributionManagement>
 
   <!-- ==================================================================== -->
