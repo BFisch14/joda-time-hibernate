@@ -102,12 +102,12 @@
         <configuration>
           <doCheck>true</doCheck>
           <doUpdate>true</doUpdate>
+          <format>{0,date,yyyy-MM-dd HH:mm:ss}</format>
+          <items>
+            <item>timestamp</item>
+          </items>
         </configuration>
-        <format>{0,date,yyyy-MM-dd HH:mm:ss}</format>
-      <items>
-        <item>timestamp</item>
-        <item>Buil
-      </items>
+        
       </plugin>
 
       <plugin>
